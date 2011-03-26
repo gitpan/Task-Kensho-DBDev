@@ -24,4 +24,4 @@ requires:
   DBIx::Class: 0
   DBIx::Class::Schema::Loader: 0
   SQL::Translator: 0
-version: 0.27
+version: 0.28

@@ -25,4 +25,4 @@ requires:
   SQL::Translator: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.27
+version: 0.28
