@@ -1,45 +1,23 @@
-use strict;
-use warnings;
-package Task::Kensho::DBDev;
-BEGIN {
-  $Task::Kensho::DBDev::AUTHORITY = 'cpan:PERIGRIN';
-}
-# git description: v0.34-TRIAL-34-g4fe033a
-$Task::Kensho::DBDev::VERSION = '0.34001'; # TRIAL
-# ABSTRACT: Database Development
-
-__END__
-
-=pod
-
-=encoding UTF-8
-
-=head1 NAME
+# NAME
 
 Task::Kensho::DBDev - Database Development
 
-=head1 VERSION
+# VERSION
 
 version 0.34001
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     > cpanm --interactive Task::Kensho::DBDev
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
-=for stopwords Buddhism EPO Kenshō nonduality amongst Organisation installable
+From [http://en.wikipedia.org/wiki/Kensho](http://en.wikipedia.org/wiki/Kensho):
 
-From L<http://en.wikipedia.org/wiki/Kensho>:
-
-=over 4
-
-Kenshō (見性) (C. Wu) is a Japanese term for enlightenment
-experiences - most commonly used within the confines of Zen
-Buddhism - literally meaning "seeing one's nature"[1] or "true
-self."[2] It generally "refers to the realization of nonduality of
-
-=back
+> Kenshō (見性) (C. Wu) is a Japanese term for enlightenment
+> experiences - most commonly used within the confines of Zen
+> Buddhism - literally meaning "seeing one's nature"\[1\] or "true
+> self."\[2\] It generally "refers to the realization of nonduality of
 
 Task::Kensho is a first cut at building a list of recommended modules
 for Enlightened Perl development. CPAN is wonderful, but there are too
@@ -54,7 +32,7 @@ The modules that are bundled by Task::Kensho are broken down into
 several categories and are still being considered. They are all taken
 from various top 100 most used perl modules lists and from discussions
 with various subject matter experts in the Perl Community. That said,
-this bundle does I<not> follow the guidelines established for the EPO-EC
+this bundle does _not_ follow the guidelines established for the EPO-EC
 for peer review via industry advisers.
 
 Starting in 2011, Task::Kensho split its sub-groups of modules into
@@ -63,39 +41,35 @@ their modules by default. This facilitates the ease and simplicity the
 distribution aims to achieve. Each Task::Kensho sub-task is listed at the
 beginning of its section in this documentation.
 
-=head2 Database Development: Task::Kensho::DBDev
+## Database Development: Task::Kensho::DBDev
 
-=over 4
+- [DBD::SQLite](https://metacpan.org/pod/DBD::SQLite)
 
-=item L<DBD::SQLite>
+    Self Contained RDBMS in a DBI Driver
 
-Self Contained RDBMS in a DBI Driver
+- [DBI](https://metacpan.org/pod/DBI)
 
-=item L<DBI>
+    Database independent interface for Perl
 
-Database independent interface for Perl
+- [DBIx::Class](https://metacpan.org/pod/DBIx::Class)
 
-=item L<DBIx::Class>
+    Extensible and flexible object <-> relational mapper.
 
-Extensible and flexible object <-> relational mapper.
+- [DBIx::Class::Schema::Loader](https://metacpan.org/pod/DBIx::Class::Schema::Loader)
 
-=item L<DBIx::Class::Schema::Loader>
+    Dynamic definition of a DBIx::Class::Schema
 
-Dynamic definition of a DBIx::Class::Schema
+- [SQL::Translator](https://metacpan.org/pod/SQL::Translator)
 
-=item L<SQL::Translator>
+    Manipulate structured data definitions (SQL and more)
 
-Manipulate structured data definitions (SQL and more)
-
-=back
-
-=head1 RELEASE SCHEDULE
+# RELEASE SCHEDULE
 
 Starting with release 0.18 Task::Kensho was moved to a monthly release
 cycle. This will facilitate a consistent schedule for upstream vendors
 to track the changes in Task::Kensho.
 
-=head1 BUGS AND LIMITATIONS
+# BUGS AND LIMITATIONS
 
 This list is by no means comprehensive of the "Good" Modules on CPAN.
 Nor is this necessarily the correct path for all developers. Each of
@@ -104,23 +78,21 @@ better for you. This is however a path to good perl practice, and a
 starting place on the road to Enlightened Perl programming.
 
 Please report any bugs or feature requests to
-C<bug-task-kensho@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.
+`bug-task-kensho@rt.cpan.org`, or through the web interface at
+[http://rt.cpan.org](http://rt.cpan.org).
 
-=head1 SEE ALSO
+# SEE ALSO
 
-L<http://www.enlightenedperl.org/>,
-L<Perl::Dist::Strawberry|Perl::Dist::Strawberry>
+[http://www.enlightenedperl.org/](http://www.enlightenedperl.org/),
+[Perl::Dist::Strawberry](https://metacpan.org/pod/Perl::Dist::Strawberry)
 
-=head1 AUTHOR
+# AUTHOR
 
 Chris Prather <chris@prather.org>
 
-=head1 COPYRIGHT AND LICENSE
+# COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2008 by Chris Prather.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
-=cut
