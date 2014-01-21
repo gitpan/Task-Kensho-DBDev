@@ -1,5 +1,5 @@
 ---
-abstract: '{{ $config_data->{$module}{description} }}'
+abstract: 'Database Development'
 author:
   - 'Chris Prather <chris@prather.org>'
 build_requires:
@@ -46,7 +46,7 @@ resources:
   bugtracker: https://github.com/EnlightenedPerlOrganisation/task-kensho/issues
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: 0.34001
+version: 0.34002
 x_Dist_Zilla:
   perl:
     version: 5.019007
@@ -139,10 +139,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::PodCoverageTests
       name: '=inc::SubTaskPluginBundle/PodCoverageTests'
       version: 5.012
-    -
-      class: Dist::Zilla::Plugin::Test::PodSpelling
-      name: '=inc::SubTaskPluginBundle/Test::PodSpelling'
-      version: 2.006002
     -
       class: Dist::Zilla::Plugin::Test::Kwalitee
       name: '=inc::SubTaskPluginBundle/Test::Kwalitee'
@@ -327,6 +323,10 @@ x_Dist_Zilla:
       name: '=inc::SubTaskPluginBundle/Run::AfterBuild'
       version: 0.020
     -
+      class: Dist::Zilla::Plugin::CheckPrereqsIndexed
+      name: '=inc::SubTaskPluginBundle/CheckPrereqsIndexed'
+      version: 0.010
+    -
       class: Dist::Zilla::Plugin::Git::Check
       name: '=inc::SubTaskPluginBundle/Git::Check'
       version: 2.019
@@ -343,10 +343,6 @@ x_Dist_Zilla:
       name: '=inc::SubTaskPluginBundle/Git::Remote::Check'
       version: 0.2.0
     -
-      class: Dist::Zilla::Plugin::CheckPrereqsIndexed
-      name: '=inc::SubTaskPluginBundle/CheckPrereqsIndexed'
-      version: 0.010
-    -
       class: Dist::Zilla::Plugin::TestRelease
       name: '=inc::SubTaskPluginBundle/TestRelease'
       version: 5.012
@@ -358,10 +354,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '=inc::SubTaskPluginBundle/UploadToCPAN'
       version: 5.012
-    -
-      class: Dist::Zilla::Plugin::CopyFilesFromRelease
-      name: '=inc::SubTaskPluginBundle/CopyFilesFromRelease'
-      version: 0.001
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '=inc::SubTaskPluginBundle/Git::Commit'

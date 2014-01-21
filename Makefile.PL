@@ -68,7 +68,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "{{ \$config_data->{\$module}{description} }}",
+  "ABSTRACT" => "Database Development",
   "AUTHOR" => "Chris Prather <chris\@prather.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -89,7 +89,7 @@ my %WriteMakefileArgs = (
     "List::Util" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.34001",
+  "VERSION" => "0.34002",
   "test" => {
     "TESTS" => "t/*.t"
   }
