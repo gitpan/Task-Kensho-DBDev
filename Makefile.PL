@@ -8,8 +8,8 @@ use warnings;
 
 BEGIN {
 my %configure_requires = (
-    'ExtUtils::MakeMaker' => '6.30',
     'Module::Build::Tiny' => '0.033',
+    'ExtUtils::MakeMaker' => '6.30',
 );
 
 my @missing = grep {
@@ -68,7 +68,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Database Development",
+  "ABSTRACT" => "A Glimpse at an Enlightened Perl: {{ \$config_data->{\$module}{description} }}",
   "AUTHOR" => "Chris Prather <chris\@prather.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -89,7 +89,7 @@ my %WriteMakefileArgs = (
     "List::Util" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.34002",
+  "VERSION" => "0.34003",
   "test" => {
     "TESTS" => "t/*.t"
   }
