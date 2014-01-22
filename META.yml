@@ -1,5 +1,5 @@
 ---
-abstract: 'A Glimpse at an Enlightened Perl: {{ $config_data->{$module}{description} }}'
+abstract: 'A Glimpse at an Enlightened Perl: Database Development'
 author:
   - 'Chris Prather <chris@prather.org>'
 build_requires:
@@ -9,7 +9,7 @@ build_requires:
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
-  Module::Build::Tiny: 0.033
+  Module::Build::Tiny: 0.034
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.133380'
 license: perl
@@ -46,7 +46,7 @@ resources:
   bugtracker: https://github.com/EnlightenedPerlOrganisation/task-kensho/issues
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: 0.34003
+version: 0.34004
 x_Dist_Zilla:
   perl:
     version: 5.019007
@@ -276,7 +276,7 @@ x_Dist_Zilla:
             DBIx::Class: 0
             DBIx::Class::Schema::Loader: 0
             SQL::Translator: 0
-          require_develop: 1
+          require_develop: 0
           type: requires
         inc::OptionalFeatureForSubTask:
           configfile: modules.yml

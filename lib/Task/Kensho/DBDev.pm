@@ -4,8 +4,8 @@ package Task::Kensho::DBDev;
 BEGIN {
   $Task::Kensho::DBDev::AUTHORITY = 'cpan:PERIGRIN';
 }
-# git description: v0.34002-TRIAL-13-gc09111c
-$Task::Kensho::DBDev::VERSION = '0.34003'; # TRIAL
+# git description: v0.34003-TRIAL-7-g2b3e170
+$Task::Kensho::DBDev::VERSION = '0.34004'; # TRIAL
 # ABSTRACT: A Glimpse at an Enlightened Perl: Database Development
 
 __END__
@@ -20,7 +20,7 @@ Task::Kensho::DBDev - A Glimpse at an Enlightened Perl: Database Development
 
 =head1 VERSION
 
-version 0.34003
+version 0.34004
 
 =head1 SYNOPSIS
 

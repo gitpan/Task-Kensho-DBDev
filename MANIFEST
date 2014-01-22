@@ -9,7 +9,6 @@ Makefile.PL
 README
 README.md
 lib/Task/Kensho/DBDev.pm
-modules.yml
 t/00-report-prereqs.t
 xt/author/00-compile.t
 xt/release/changes_has_content.t
