@@ -4,8 +4,8 @@ package Task::Kensho::DBDev;
 BEGIN {
   $Task::Kensho::DBDev::AUTHORITY = 'cpan:PERIGRIN';
 }
-# git description: v0.34003-TRIAL-7-g2b3e170
-$Task::Kensho::DBDev::VERSION = '0.34004'; # TRIAL
+# git description: v0.34004-TRIAL-22-g063b29e
+$Task::Kensho::DBDev::VERSION = '0.35';
 # ABSTRACT: A Glimpse at an Enlightened Perl: Database Development
 
 __END__
@@ -20,7 +20,7 @@ Task::Kensho::DBDev - A Glimpse at an Enlightened Perl: Database Development
 
 =head1 VERSION
 
-version 0.34004
+version 0.35
 
 =head1 SYNOPSIS
 
@@ -100,12 +100,6 @@ regarding which modules you wish to install.
 The C<cpanm> client requires interactive mode to be enabled for this to work:
 
     cpanm --interactive Task-Kensho
-
-=head1 RELEASE SCHEDULE
-
-Starting with release 0.18, L<Task::Kensho> was moved to a monthly release
-cycle. This will facilitate a consistent schedule for upstream vendors
-to track the changes in L<Task::Kensho>.
 
 =head1 BUGS AND LIMITATIONS
 

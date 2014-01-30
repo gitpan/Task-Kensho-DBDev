@@ -7,6 +7,7 @@ build_requires:
   File::Spec::Functions: 0
   List::Util: 0
   Test::More: 0
+  version: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build::Tiny: 0.034
@@ -46,7 +47,7 @@ resources:
   bugtracker: https://github.com/EnlightenedPerlOrganisation/task-kensho/issues
   homepage: https://github.com/EnlightenedPerlOrganisation/task-kensho
   repository: https://github.com/EnlightenedPerlOrganisation/task-kensho.git
-version: 0.34004
+version: 0.35
 x_Dist_Zilla:
   perl:
     version: 5.019007
@@ -60,16 +61,16 @@ x_Dist_Zilla:
       name: '=inc::SubTaskPluginBundle/Git::GatherDir'
       version: 2.019
     -
-      class: inc::MungeFileWithConfig
+      class: Dist::Zilla::Plugin::MungeFile::WithConfigFile
       config:
-        inc::MungeFileWithConfig:
+        Dist::Zilla::Plugin::MungeFile::WithConfigFile:
           configfile: '../modules.yml'
           files:
             - README
           finder:
             - ':InstallModules'
-      name: '=inc::SubTaskPluginBundle/=inc::MungeFileWithConfig'
-      version: ~
+      name: '=inc::SubTaskPluginBundle/MungeFile::WithConfigFile'
+      version: 0.002
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '=inc::SubTaskPluginBundle/MetaYAML'
@@ -150,7 +151,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::ReportPrereqs
       name: '=inc::SubTaskPluginBundle/Test::ReportPrereqs'
-      version: 0.012
+      version: 0.013
     -
       class: Dist::Zilla::Plugin::Test::Portability
       name: '=inc::SubTaskPluginBundle/Test::Portability'
@@ -262,7 +263,7 @@ x_Dist_Zilla:
       name: '=inc::SubTaskPluginBundle/MetaConfig'
       version: 5.012
     -
-      class: inc::OptionalFeatureForSubTask
+      class: Dist::Zilla::Plugin::OptionalFeature
       config:
         Dist::Zilla::Plugin::OptionalFeature:
           always_recommend: 1
@@ -278,10 +279,8 @@ x_Dist_Zilla:
             SQL::Translator: 0
           require_develop: 0
           type: requires
-        inc::OptionalFeatureForSubTask:
-          configfile: modules.yml
-      name: '=inc::SubTaskPluginBundle/=inc::OptionalFeatureForSubTask'
-      version: ~
+      name: '=inc::SubTaskPluginBundle/OptionalFeature'
+      version: 0.012
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '=inc::SubTaskPluginBundle/AutoPrereqs'
@@ -309,15 +308,19 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MakeMaker::Fallback
       name: '=inc::SubTaskPluginBundle/MakeMaker::Fallback'
-      version: 0.005
+      version: 0.006
     -
       class: Dist::Zilla::Plugin::ModuleBuildTiny
       name: '=inc::SubTaskPluginBundle/ModuleBuildTiny'
       version: 0.006
     -
       class: Dist::Zilla::Plugin::CheckSelfDependency
+      config:
+        Dist::Zilla::Plugin::CheckSelfDependency:
+          finder:
+            - ':InstallModules'
       name: '=inc::SubTaskPluginBundle/CheckSelfDependency'
-      version: 0.006
+      version: 0.007
     -
       class: Dist::Zilla::Plugin::Run::AfterBuild
       name: '=inc::SubTaskPluginBundle/Run::AfterBuild'
@@ -333,11 +336,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
       name: '=inc::SubTaskPluginBundle/Git::CheckFor::MergeConflicts'
-      version: 0.008
+      version: 0.009
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
       name: '=inc::SubTaskPluginBundle/Git::CheckFor::CorrectBranch'
-      version: 0.008
+      version: 0.009
     -
       class: Dist::Zilla::Plugin::Git::Remote::Check
       name: '=inc::SubTaskPluginBundle/Git::Remote::Check'
@@ -397,6 +400,6 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: 1
+      is_trial: 0
     version: 5.012
 x_authority: cpan:PERIGRIN
