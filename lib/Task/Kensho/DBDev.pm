@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 package Task::Kensho::DBDev;
-# git description: v0.36-22-g1b72cf1
-$Task::Kensho::DBDev::VERSION = '0.37';
+# git description: v0.37-24-g8f3d229
+$Task::Kensho::DBDev::VERSION = '0.38';
 # ABSTRACT: A Glimpse at an Enlightened Perl: Database Development
 
 __END__
@@ -17,7 +17,7 @@ Task::Kensho::DBDev - A Glimpse at an Enlightened Perl: Database Development
 
 =head1 VERSION
 
-version 0.37
+version 0.38
 
 =head1 SYNOPSIS
 
